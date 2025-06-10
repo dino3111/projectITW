@@ -1,0 +1,174 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap" rel="stylesheet">
+    <link href="StyleSheet.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
+    <title>Paris 2024</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <!-- Logo -->
+            <a class="navbar-brand" href="sitefinal.html">
+                <img width="150px" src="./imagens/logoparisnovo.png" alt="Logo" id="logo">
+            </a>
+    
+            <!-- Botão Hamburguer -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <!-- Links do Menu -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <!-- Tabelas Principais -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="tabelasDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Tabelas Principais
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="tabelasDropdown">
+                            <li><a class="dropdown-item" href="athletes.html">Atletas</a></li>
+                            <li><a class="dropdown-item" href="coaches.html">Treinadores</a></li>
+                            <li><a class="dropdown-item" href="teams.html">Equipas</a></li>
+                            <li><a class="dropdown-item" href="comites.html">Comités Olímpicos</a></li>
+                            <li><a class="dropdown-item" href="officials.html">Oficiais Técnicos</a></li>
+                        </ul>
+                    </li>
+    
+                    <!-- Torneios -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="torneiosDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Torneios
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="torneiosDropdown">
+                            <li><a class="dropdown-item" href="athletics.html">Atletismo</a></li>
+                            <li><a class="dropdown-item" href="basketball.html">Basquetebol</a></li>
+                            <li><a class="dropdown-item" href="swimming.html">Natação</a></li>
+                        </ul>
+                    </li>
+    
+                    <!-- Outras -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="outrasDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Outras
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="outrasDropdown">
+                            <li><a class="dropdown-item" href="torch.html">Tocha Olímpica</a></li>
+                            <li><a class="dropdown-item" href="venues.html">Estádios & Espaços</a></li>
+                            <li><a class="dropdown-item" href="sports.html">Modalidades</a></li>
+                            <li><a class="dropdown-item" href="competitions.html">Competições</a></li>
+                            <li><a class="dropdown-item" href="medals.html">Medalhas</a></li>
+                            <li><a class="dropdown-item" href="rankingmedals.html">Ranking por País</a></li>
+                        </ul>
+                    </li>
+    
+                    <!-- Loja -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="loja.html">
+                            Loja <i class="fa fa-shopping-cart" style="margin-left: 8px;"></i>
+                        </a>
+                    </li>  
+                    
+                    <!-- Favoritos -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="favoritos.html">
+                            Favoritos <i class="fa fa-heart" style="margin-left: 8px;"></i>
+                        </a>
+                    </li>
+
+                </ul>
+    
+                <!-- Temas -->
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <div class="nav-link" type="button" data-bs-theme-value="light" aria-pressed="false">
+                            <i class="theme-icon fa fa-sun-o" title="Modo claro"></i>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <div class="nav-link" type="button" data-bs-theme-value="dark" aria-pressed="false">
+                            <i class="theme-icon fa fa-moon-o" title="Modo escuro"></i>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="d-block w-100" src="./imagens/banner1.jpg" alt="First slide">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="./imagens/banner2.jpg" alt="Second slide">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="./imagens/banner3.jpg" alt="Third slide">
+          </div>
+        </div>
+        <a class="carousel-control-prev" data-bs-target="#carouselExampleControls" role="button" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </a>
+        <a class="carousel-control-next" data-bs-target="#carouselExampleControls" role="button" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </a>
+      </div>
+
+    <h1></h1>
+
+    <div class="content-section" style="padding-bottom: 100px;">
+        <h1>
+            <a href="https://pt.wikipedia.org/wiki/Jogos_Ol%C3%ADmpicos_de_Ver%C3%A3o_de_2024" style="font-weight: bold; color: inherit; text-decoration: none; text-align:center ">Jogos Olímpicos de Verão de 2024</a>
+        </h1>
+        <hr>
+        <p>
+            Jogos Olímpicos de Verão de 2024, oficialmente denominados Jogos da XXXIII Olimpíada e comumente conhecidos como Paris 2024, foi um evento multiesportivo internacional realizado de 26 de julho (data da cerimônia de abertura) a 11 de agosto de 2024 na França, com Paris como principal cidade anfitriã e 16 outras cidades espalhadas pela França Metropolitana, além de uma sub-sede no Taiti — uma ilha dentro do país ultramarino francês e da coletividade ultramarina da Polinésia Francesa.
+        </p>
+        <p>
+            A cidade de Paris foi escolhida como sede na 131ª Sessão do Comitê Olímpico Internacional (COI) em Lima, Peru, em 13 de setembro de 2017. Após múltiplas desistências que deixaram apenas Paris e Los Angeles na disputa, o COI aprovou um processo para definir os locais de realização dos Jogos de 2024 e 2028 respectivamente. Tendo anteriormente sediado os Jogos de 1900 e de 1924, Paris torna-se a segunda cidade, depois de Londres (que foi a anfitriã em 1908, 1948 e 2012), a sediar três vezes os Jogos Olímpicos de Verão. Paris 2024 também marca o centenário de Paris 1924, e estes Jogos Olímpicos são os sextos organizados pela França (três de verão e três de inverno), os primeiros Jogos Olímpicos franceses desde os Jogos Olímpicos de Inverno de 1992 em Albertville.
+        </p>
+        <p>
+            Em 2024 os Jogos Olímpicos de Verão retornarão ao tradicional ciclo olímpico de quatro anos, já que os Jogos de 2020, em Tóquio, foram adiados em um ano devido à pandemia de COVID-19.
+        </p>
+        <p>
+            Os Jogos de 2024 contam com a estreia do breakdance como evento olímpico, e serão os últimos Jogos Olímpicos realizados durante a gestão do COI pelo presidente Thomas Bach. Os Jogos tinham a expectativa de serem os primeiros a contar com o mesmo número de atletas entre homens e mulheres, mas após a lista final de inscritos os homens devem contar com uma quantidade superior de competidores. As Olimpíadas de Paris custaram cerca de 9 bilhões de euros.
+        </p>
+        
+        <div class="container text-center" style="margin-top: 30px;">
+            <div style="position: relative; padding-bottom: 56.25%; height: 0; max-width: 100%; margin: auto; overflow: hidden;">
+                <iframe 
+                    src="https://www.youtube.com/embed/iVc61V4xhlw" 
+                    title="YouTube video player" 
+                    frameborder="1" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    allowfullscreen 
+                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+                </iframe>
+            </div>
+        </div>
+        <hr>
+    </div>   
+
+    <footer class="footer bg-body-tertiary">
+        <p>&copy; 2024 - Introdução Às Tecnologias Web - UA - 
+            <a href="mailto:claudinomartins@ua.pt" class="email-link">Claudino</a> & 
+            <a href="mailto:rodrigosimoes@ua.pt" class="email-link">Rodrigo</a>
+        </p>
+    </footer>
+    
+    <script src="tema.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

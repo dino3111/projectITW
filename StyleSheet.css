@@ -1,0 +1,153 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Parkinsans", sans-serif;
+}
+
+body {
+    display: flex;  /* Flexbox ativado */
+    flex-direction: column;  /* Organiza o conteúdo em coluna */
+    min-height: 100vh;  /* Garante que o body ocupe toda a altura da tela */
+    background-size: cover;
+    background-position: center;
+    margin: 0; /* Remove margens padrão */
+}
+
+.logo {
+    font-size: 34px;
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.nav-link {
+    color: white !important;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.navbar-light {
+    background-color: #f8f9fa !important; /* Fundo claro */
+    color: #343a40 !important; /* Texto escuro */
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: #343a40 !important; /* Cor dos links no tema claro */
+}
+
+.navbar-dark {
+    background-color: #343a40 !important; /* Fundo escuro */
+    color: #fff !important; /* Texto claro */
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: #fff !important; /* Cor dos links no tema escuro */
+}
+
+.navbar-dark .theme-icon {
+    color: #fff !important; /* Ícones claros no tema escuro */
+}
+
+.navbar-light .theme-icon {
+    color: #343a40 !important; /* Ícones escuros no tema claro */
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+.carousel-inner img {
+    width: 100%;
+    height: 700px;
+    object-fit: cover;
+}
+
+.content-section {
+    max-width: 1250px;
+    margin: 20px auto;
+    padding: 20px;
+    text-align: justify;
+    flex-grow: 1;  
+}
+
+.footer {
+    color: #e0c47c;
+    text-align: center;
+    padding: 20px 0; /* Espaçamento vertical */
+    background-color: #343a40; /* Fundo escuro */
+    width: 100%; /* Garante a largura total */
+    margin-top: auto; /* Posiciona no final da página */
+    flex-shrink: 0; /* Impede o encolhimento do footer */
+}
+
+
+.footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.nav-link {
+    color: inherit !important;
+    font-size: 16px;
+    font-weight: 500;
+    position: relative; /* Necessário para o efeito */
+}
+
+.nav-link::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transition: width 0.3s ease-in-out;
+}
+
+.nav-link:hover::before {
+    width: 100%; /* A linha se expande ao passar o mouse */
+}
+
+#logo {
+    width: 250px; /* Altere para o tamanho desejado */
+    height: auto; /* Mantém a proporção do logo */
+}
+
+.navbar-nav .nav-item {
+    margin-right: 20px; /* Ajuste este valor para o espaçamento desejado */
+}
+
+.navbar-nav .nav-item:last-child {
+    margin-right: 0; /* Remove o espaçamento do último item */
+}
+
+.spacing {
+    margin-left: 3px; /* Ajuste o valor conforme necessário */
+}
+
+.email-link {
+    color: #e0c47c;  /* Substitua pela cor desejada */
+}
+
+.ui-autocomplete {
+    z-index: 1050; /* Garante que a lista esteja acima de outros elementos */
+    background-color: #fff;
+    border: 1px solid #ccc;
+    max-height: 200px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 5px;
+}
+
+.ui-autocomplete li {
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.ui-autocomplete li:hover {
+    background-color: #f0f0f0;
+}
+
+
+

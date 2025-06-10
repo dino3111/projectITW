@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap" rel="stylesheet">
+    <link href="StyleSheet.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <title>Paris 2024 - Basketball</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <!-- Logo -->
+            <a class="navbar-brand" href="sitefinal.html">
+                <img width="150px" src="././imagens/logoparisnovo.png" alt="Logo" id="logo">
+            </a>
+    
+            <!-- Botão Hamburguer -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <!-- Links do Menu -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <!-- Tabelas Principais -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="tabelasDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Tabelas Principais
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="tabelasDropdown">
+                            <li><a class="dropdown-item" href="athletes.html">Atletas</a></li>
+                            <li><a class="dropdown-item" href="coaches.html">Treinadores</a></li>
+                            <li><a class="dropdown-item" href="teams.html">Equipas</a></li>
+                            <li><a class="dropdown-item" href="comites.html">Comités Olímpicos</a></li>
+                            <li><a class="dropdown-item" href="officials.html">Oficiais Técnicos</a></li>
+                        </ul>
+                    </li>
+    
+                    <!-- Torneios -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="torneiosDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Torneios
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="torneiosDropdown">
+                            <li><a class="dropdown-item" href="athletics.html">Atletismo</a></li>
+                            <li><a class="dropdown-item" href="basketball.html">Basquetebol</a></li>
+                            <li><a class="dropdown-item" href="swimming.html">Natação</a></li>
+                        </ul>
+                    </li>
+    
+                    <!-- Outras -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="outrasDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Outras
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="outrasDropdown">
+                            <li><a class="dropdown-item" href="torch.html">Tocha Olímpica</a></li>
+                            <li><a class="dropdown-item" href="venues.html">Estádios & Espaços</a></li>
+                            <li><a class="dropdown-item" href="sports.html">Modalidades</a></li>
+                            <li><a class="dropdown-item" href="competitions.html">Competições</a></li>
+                            <li><a class="dropdown-item" href="medals.html">Medalhas</a></li>
+                            <li><a class="dropdown-item" href="rankingmedals.html">Ranking por País</a></li>
+                        </ul>
+                    </li>
+    
+                    <!-- Loja -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="loja.html">
+                            Loja <i class="fa fa-shopping-cart" style="margin-left: 8px;"></i>
+                        </a>
+                    </li>  
+                    
+                    <!-- Favoritos -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="favoritos.html">
+                            Favoritos <i class="fa fa-heart" style="margin-left: 8px;"></i>
+                        </a>
+                    </li>
+
+                </ul>
+    
+                <!-- Temas -->
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <div class="nav-link" type="button" data-bs-theme-value="light" aria-pressed="false">
+                            <i class="theme-icon fa fa-sun-o" title="Modo claro"></i>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <div class="nav-link" type="button" data-bs-theme-value="dark" aria-pressed="false">
+                            <i class="theme-icon fa fa-moon-o" title="Modo escuro"></i>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <body>
+        <!-- Working Area -->
+        <div class="container bannerTop">
+            <div class="border-bottom pt-4 pb-2 mb-3">
+                <div class="row flex">
+                    <div class="col-md-8 d-flex align-items-center">
+                        <h2 class="d-flex align-items-center">
+                            <i class="fa-solid fa-person-swimming text-info" style="margin-right: 5px;"></i>
+                            <span class="ms-2">Basketball</span>
+                        </h2>
+                    </div>
+                    <div class="col-md-4 d-flex justify-content-end align-items-start">
+                        <div class="me-3">
+                            <label for="eventSelect" class="form-label">Escolha um Evento:</label>
+                            <select id="eventSelect" class="form-select"
+                                data-bind="options: events, optionsText: 'EventName', optionsValue: 'EventId', value: selectedEvent"></select>
+                        </div>
+                        <div>
+                            <label for="stageSelect" class="form-label" style="white-space: nowrap;">Escolha uma
+                                Fase:</label>
+                            <select id="stageSelect" class="form-select"
+                                data-bind="options: stages, optionsText: 'StageName', optionsValue: 'StageId', value: selectedStage"></select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row small">
+                <p class="col-4 mr-auto pt-2">
+                </p>
+                <!-- Ponto de alteração: Paginação corrigida -->
+                <div class="col-8 my-0 pt-3">
+                </div>
+            </div>
+            <table class="table table-striped table-sm small">
+                <thead>
+                    <tr>
+                        <th>Categoria - Fase</th>
+                        <th>Sexo</th>
+                        <th>Nome do Participante</th>
+                        <th>País</th>
+                        <th>Mais Dados</th>
+                    </tr>
+                </thead>
+                <tbody data-bind="foreach: matches">
+                    <tr>
+                        <td data-bind="text: Name"></td>
+                        <td data-bind="text: Sex"></td>
+                        <td data-bind="text: ParticipantName"></td>
+                        <td data-bind="text: CountryName"></td>
+                        <td>
+                            <button class="btn btn-sm btn-outline-secondary" data-bind="click: $parent.showMatchDetails">
+                                <i class="fa fa-eye"></i>
+                            </button>                                                        
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="modal fade" id="matchDetailsModal" tabindex="-1" data-bind="css: { show: showDetails }, style: { display: showDetails() ? 'block' : 'none' }">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" data-bind="text: selectedMatch() ? selectedMatch().Name : 'Detalhes da Partida'"></h5>
+                            <button type="button" class="btn-close" data-bind="click: closeDetails"></button>
+                        </div>
+                        <div class="modal-body" data-bind="with: selectedMatch">
+                            <p><strong>Participante:</strong> <span data-bind="text: ParticipantName"></span></p>
+                            <p><strong>País:</strong> <span data-bind="text: CountryName"></span></p>
+                            <p><strong>Evento:</strong> <span data-bind="text: EventName"></span></p>
+                            <p><strong>Fase:</strong> <span data-bind="text: StageName"></span></p>
+                            <p><strong>Data:</strong> <span data-bind="text: $parent.formatDate(Date)"></span></p>
+                            <p><strong>Resultado:</strong> <span data-bind="text: Result"></span></p>
+                            <p><strong>Estádio:</strong> <span data-bind="text: Venue"></span></p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bind="click: closeDetails">Fechar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <script src="../lib/knockout/dist/knockout-latest.min.js"></script>
+            <script src="../lib/jquery/dist/jquery.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+            <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js"
+                integrity="sha256-hlKLmzaRlE8SCJC1Kw8zoUbU8BxA+8kR3gseuKfMjxA=" crossorigin="anonymous"></script>
+            <script src="basketball.js"></script>
+            <script src="tema.js"></script>
+    </body>
+
+</html>

@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap" rel="stylesheet">
+    <link href="StyleSheet.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <title>Paris 2024 - Atletas</title>
+    <style>
+    .card {
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        overflow: hidden;
+        padding: 10px;
+    }
+    
+    .card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
+    
+    .card img {
+    height: auto; 
+    max-height: 150px; 
+    width: 100%; 
+    object-fit: contain; 
+    margin-bottom: 10px;
+    }
+
+    .card-title {
+        font-size: 13px;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin: 5px 0;
+    }
+    
+    .card .btn {
+        font-size: 12px;
+        padding: 10px 5px;
+    }
+    
+    .card .btn-sm {
+        font-size: 13px; 
+    }    
+
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <!-- Logo -->
+            <a class="navbar-brand" href="sitefinal.html">
+                <img width="150px" src="././imagens/logoparisnovo.png" alt="Logo" id="logo">
+            </a>
+    
+            <!-- Botão Hamburguer -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <!-- Links do Menu -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <!-- Tabelas Principais -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="tabelasDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Tabelas Principais
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="tabelasDropdown">
+                            <li><a class="dropdown-item" href="athletes.html">Atletas</a></li>
+                            <li><a class="dropdown-item" href="coaches.html">Treinadores</a></li>
+                            <li><a class="dropdown-item" href="teams.html">Equipas</a></li>
+                            <li><a class="dropdown-item" href="comites.html">Comités Olímpicos</a></li>
+                            <li><a class="dropdown-item" href="officials.html">Oficiais Técnicos</a></li>
+                        </ul>
+                    </li>
+    
+                    <!-- Torneios -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="torneiosDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Torneios
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="torneiosDropdown">
+                            <li><a class="dropdown-item" href="athletics.html">Atletismo</a></li>
+                            <li><a class="dropdown-item" href="basketball.html">Basquetebol</a></li>
+                            <li><a class="dropdown-item" href="swimming.html">Natação</a></li>
+                        </ul>
+                    </li>
+    
+                    <!-- Outras -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="outrasDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Outras
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="outrasDropdown">
+                            <li><a class="dropdown-item" href="torch.html">Tocha Olímpica</a></li>
+                            <li><a class="dropdown-item" href="venues.html">Estádios & Espaços</a></li>
+                            <li><a class="dropdown-item" href="sports.html">Modalidades</a></li>
+                            <li><a class="dropdown-item" href="competitions.html">Competições</a></li>
+                            <li><a class="dropdown-item" href="medals.html">Medalhas</a></li>
+                            <li><a class="dropdown-item" href="rankingmedals.html">Ranking por País</a></li>
+                        </ul>
+                    </li>
+    
+                    <!-- Loja -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="loja.html">
+                            Loja <i class="fa fa-shopping-cart" style="margin-left: 8px;"></i>
+                        </a>
+                    </li>  
+                    
+                    <!-- Favoritos -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="favoritos.html">
+                            Favoritos <i class="fa fa-heart" style="margin-left: 8px;"></i>
+                        </a>
+                    </li>
+
+                </ul>
+    
+                <!-- Temas -->
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <div class="nav-link" type="button" data-bs-theme-value="light" aria-pressed="false">
+                            <i class="theme-icon fa fa-sun-o" title="Modo claro"></i>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <div class="nav-link" type="button" data-bs-theme-value="dark" aria-pressed="false">
+                            <i class="theme-icon fa fa-moon-o" title="Modo escuro"></i>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <body>
+        <!-- Working Area -->
+        <div class="container mt-4">
+            <div class="row border-bottom py-2 mb-2">
+                <h2 class="col-6" data-bind="text: displayName">Atletas</h2>
+                <div class="col-6" id="cover">
+                    <div class="row" style="justify-content:end">
+                        <input class="form-control" type="text" placeholder="Search" aria-label="Search" style="width:35%" id="procura" name="procura" autocomplete="on">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Novo botão abaixo da barra -->
+            <div class="row mt-2">
+                <div class="col-12 text-end">
+                    <a id="redirectToAthletes" class="btn btn-primary btn-sm">
+                        <i class="fa fa-list"></i> Alternar Visualização
+                    </a>
+                </div>
+            </div>
+            
+        
+            <!-- Paginação -->
+            <div class="row small">
+                <p class="col-4 mr-auto pt-2">
+                    <span data-bind="html: 'Page: ' + currentPage() + ' of ' + totalPages()"></span><br />
+                    <span data-bind="html: 'Athletes: ' + fromRecord() + '-' + toRecord() + ' of ' + totalRecords()"></span>
+                </p>
+                <div class="col-8 my-0 pt-3">
+                    <ul class="pagination float-end">
+                        <!-- Botão Primeira Página -->
+                        <li class="page-item" data-bind="css: { disabled: currentPage() === 1 }">
+                            <a class="page-link" title="First Page" data-bind="attr: { href: './athletescards.html?page=1' }">«</a>
+                        </li>
+                    
+                        <!-- Botão Anterior -->
+                        <li class="page-item" data-bind="css: { disabled: !hasPrevious() }">
+                            <a class="page-link" title="Previous Page" data-bind="attr: { href: './athletescards.html?page=' + previousPage() }">←</a>
+                        </li>
+                    
+                        <!-- Números das Páginas -->
+                        <!-- ko foreach: pageArray() -->
+                        <li class="page-item" data-bind="css: { active: $data === $parent.currentPage() }">
+                            <a class="page-link" data-bind="attr: { href: './athletescards.html?page=' + $data }, text: $data"></a>
+                        </li>
+                        <!-- /ko -->
+                    
+                        <!-- Botão Próxima Página -->
+                        <li class="page-item" data-bind="css: { disabled: !hasNext() }">
+                            <a class="page-link" title="Next Page" data-bind="attr: { href: './athletescards.html?page=' + nextPage() }">→</a>
+                        </li>
+                    
+                        <!-- Botão Última Página -->
+                        <li class="page-item" data-bind="css: { disabled: currentPage() === totalPages() }">
+                            <a class="page-link" title="Last Page" data-bind="attr: { href: './athletescards.html?page=' + totalPages() }">»</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        
+            <!-- Grid de Atletas -->
+            <div class="row" data-bind="foreach: athletes.slice(0, 25)">
+                <div class="col-12 col-sm-6 col-md-4 col-lg-2 p-2">
+                    <div class="card text-center h-100">
+                        <!-- Foto -->
+                        <!-- ko if: Photo -->
+                        <a data-bind="attr: { href: Photo }">
+                            <img class="card-img-top img-thumbnail" data-bind="attr: { src: Photo }" onerror="this.onerror=null;this.src='./imagens/personnotfound.png';">
+                        </a>
+                        <!-- /ko -->
+                        <!-- Placeholder para imagem ausente -->
+                        <!-- ko ifnot: Photo -->
+                        <img class="card-img-top img-thumbnail" src="./imagens/personnotfound.png">
+                        <!-- /ko -->
+        
+                        <!-- Nome e Detalhes -->
+                        <div class="card-body">
+                            <p class="card-title" data-bind="text: Name"></p>
+                            <p class="text-muted" data-bind="text: Sex"></p>
+                            <p class="text-muted" data-bind="text: BirthCountry"></p>
+                            <div>
+                                <a class="btn btn-primary btn-sm" data-bind="attr: { href: './athletedetails.html?id=' + Id }">Details</a>
+                                <button class="btn btn-default  btn-sm btn-favourite" data-bind="click: () => $parent.toggleFavourite(Id), attr : { 'id': 'favourite_' + Id }">
+                                    <i data-bind="attr: {'class': $parent.favourites().includes(Id)? 'fa fa-heart text-danger' : 'fa fa-heart-o'}" class="fa fa-heart-o" title="Selecione para adicionar aos favoritos"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>        
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="../lib/knockout/dist/knockout-latest.min.js"></script>
+        <script src="../lib/jquery/dist/jquery.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+        <script src="athletescards.js"></script>
+        <script src="tema.js"></script>
+</body>
+</html>

@@ -1,0 +1,165 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Parkinsans", sans-serif;
+}
+
+.img-fluid{
+    border-radius: 20px;
+}
+
+body {
+    display: flex;  /* Flexbox ativado */
+    flex-direction: column;  /* Organiza o conteúdo em coluna */
+    min-height: 100vh;  /* Garante que o body ocupe toda a altura da tela */
+    background-size: cover;
+    background-position: center;
+    margin: 0; /* Remove margens padrão */
+}
+
+.logo {
+    font-size: 34px;
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.nav-link {
+    color: white !important;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.navbar-light {
+    background-color: #f8f9fa !important; /* Fundo claro */
+    color: #343a40 !important; /* Texto escuro */
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: #343a40 !important; /* Cor dos links no tema claro */
+}
+
+.navbar-dark {
+    background-color: #343a40 !important; /* Fundo escuro */
+    color: #fff !important; /* Texto claro */
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: #fff !important; /* Cor dos links no tema escuro */
+}
+
+.navbar-dark .theme-icon {
+    color: #fff !important; /* Ícones claros no tema escuro */
+}
+
+.navbar-light .theme-icon {
+    color: #343a40 !important; /* Ícones escuros no tema claro */
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 10px 20px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar {
+        margin-top: 10px;
+    }
+
+        .navbar a {
+            font-size: 16px;
+            margin-left: 10px;
+        }
+}
+
+@media (max-width: 480px) {
+    .header {
+        padding: 10px 15px;
+    }
+
+    .navbar a {
+        font-size: 14px;
+        display: block;
+        margin: 5px 0;
+    }
+}
+
+.buycard{
+    border-radius: 20px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+.comprar-btn{
+    background: #e0c47c;
+    color: #000;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 20px;
+    display: inline-block;
+    border: none;
+}
+
+.btn-secondary {
+    background: #e0c47c;
+    color: #000;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 20px;
+    display: inline-block;
+    border: none;
+}
+
+.carousel-inner img {
+    width: 100%;
+    height: 700px;
+    object-fit: cover;
+}
+
+.content-section {
+    max-width: 1250px; 
+    margin: 20px auto; 
+    padding: 20px; 
+    text-align: justify; 
+}
+
+.footer {
+    color: #e0c47c;
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+
+
